@@ -2,7 +2,7 @@
 
 (rule
   (targets code.ml code.mli)
-  (deps    ../scripts/generate.exe (source_tree "../scripts/codes"))
+  (deps    (source_tree "../scripts/codes"))
   (action  (chdir "../scripts" (run ./generate.exe))))
 
 (library
